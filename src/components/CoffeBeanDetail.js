@@ -10,10 +10,20 @@ function CoffeeBeanDetail(props) {
 		<React.Fragment>
 			<h1>{coffeeBean.name} details: </h1>
 			<h2>Origin: {coffeeBean.origin}</h2>
+			<h2>Roast: <Select options= { roast }/></h2>
 			<h2>Price: {coffeeBean.price}</h2>
-			<h2>Roast:</h2>
+			<h2>Description: {coffeeBean.description}</h2>
 		</React.Fragment>
-	)
+	);
+}
+
+CoffeeBeanDetail.propTypes = {
+	coffeeBean: PropTypes.object,
+	onClickingDelete:PropTypes.func,
+	onClickingEdit : PropTypes.func
+};
+
+export default CoffeeBeanDetail;
 
 
 

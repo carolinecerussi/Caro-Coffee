@@ -13,7 +13,8 @@ function NewCoffeeBean(props) {
 			price : event.target.price.value,
 			roast : event.target.roast.value,
 			description : event.description.value,
-			id: v4()
+			id: v4(),
+			pounds: 130
 	});
 }
 
