@@ -1,12 +1,10 @@
 import React from 'react';
-import Select from 'react-select';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import CoffeeBeanControl from './CoffeeBeanControl';
 
 function App() {
   return (
     <React.Fragment>
-      <header className="App-header"/>
-       <CoffeeBeanControl/>
+       <CoffeeBeanControl />
       </React.Fragment>
   );
 }

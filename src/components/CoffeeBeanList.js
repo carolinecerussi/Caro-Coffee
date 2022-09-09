@@ -1,8 +1,7 @@
 import React from "react";
 import CoffeeBean from "./CoffeeBean";
 import PropTypes from "prop-types";
-import Card from "react-boostrap/Card";
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function CoffeeBeanList(props) {
 	const coffeeBeanListStyles = {
@@ -18,7 +17,7 @@ function CoffeeBeanList(props) {
 	return (
 
 <React.Fragment>
-	<Card style={coffeeBeanListStyles}>
+	<card style={coffeeBeanListStyles}>
 		{props.coffeeBeanList.map((coffeeBean) =>
 			<CoffeeBean
 			whenCoffeeBeanClicked = {props.onCoffeeBeanSelection}
@@ -30,7 +29,7 @@ function CoffeeBeanList(props) {
 			id = {coffeeBean.id}
 			key = {coffeeBean.id}/>
 		)}
-	</Card>
+	</card>
 </React.Fragment>
 	);
 }
@@ -48,4 +47,4 @@ export default CoffeeBeanList;
 
 
 
-<img src={logo} className="CoffeeBeanSackPicture" alt="coffee bean sack" />
+

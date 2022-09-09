@@ -1,26 +1,33 @@
-import {React, useState } from 'react'
- 
-	const roast = [
-		{value: "Light" },
-		{value: "Medium"},
-		{value: "Dark"}
-	]; 
+import React from "react";
+import PropTypes from 'prop-types';
 
+
+  function CoffeeBean(props) {
+    const CoffeeBeanStyles = {
+      backgroundColor: '#62A4D3',
+      marginTop: '20px',
+      marginLeft: '20px',
+      marginRight: '20px',
+      paddingTop: '10px'
+    }
   return (
-    <div>
-      {coffeeBeans.map(({id, name, origin, roast, price, description}) => {
-        return (
-          <div key={id}>
-            <h2>name: {name}</h2>
-            <h2>origin: {origin}</h2>
-						<h2>Roast: {roast}</h2>
-						<h2>price: {price}</h2>
-						<h2>description: {description}</h2>
-            <hr />
-          </div>
-        );
-      })}
+<React.Fragment>
+  <div onClick={()=> props.whenCoffeeBeanClicked(props.id)} style= {CoffeeBeanStyles}>
+    <h1>{props.name}</h1>
+    <h3>{props.origin}</h3>
+    <h3>{props.roast}</h3>
+    <h3>{props.price}</h3>
+    <h3>{props.description}</h3>
     </div>
-  );
+</React.Fragment>
+);
 }
+CoffeeBean.propTypes = {
+  name: PropTypes.string.isRequired,
+  origin: PropTypes.string.isRequired,
+  id: PropTypes.string,
+  price: PropTypes.string.isRequired,
+  whenCoffeeBeanClicked: PropTypes.func
+};
 
+export default CoffeeBean;

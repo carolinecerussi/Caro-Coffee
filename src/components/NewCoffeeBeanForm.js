@@ -2,7 +2,6 @@ import React from "react";
 import {v4} from 'uuid';
 import PropTypes from "prop-types";
 import ReusableForm from "./ReusableForm";
-
 function NewCoffeeBeanForm(props) {
 
 	function handleNewCoffeeBeanFormSubmission(event) {
@@ -14,13 +13,14 @@ function NewCoffeeBeanForm(props) {
 			roast: event.target.roast.value,
 			description: event.target.description.value,
 			id: v4(),
-			pounds: 130
+			// pounds: getWeight()
 	});
 }
 	return (
 	<React.Fragment>
 		<ReusableForm
 			formSubmissionHandler= {handleNewCoffeeBeanFormSubmission} buttonText="Add Coffee"/>
+		
 	</React.Fragment>
 
 );
