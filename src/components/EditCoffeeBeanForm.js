@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-
+import ReusableForm from "./ReusableForm";
 
 function EditCoffeeBeanForm(props) {
 	const {coffeeBean} = props;
@@ -12,19 +12,20 @@ function EditCoffeeBeanForm(props) {
 			origin : event.target.origin.value,
 			roast: event.target.origin.value,
 			price: event.target.price.value,
-			description : event.target.description.value
-		})
+			description : event.target.description.value,
+			id: coffeeBean.id});
+		}
 		return (
 			<React.Fragment>
-			<ReusableForm formSubmissionHandler={handleEditedCoffeeBeanForm} button="Update Coffee Details" />
+			<ReusableForm 
+			formSubmissionHandler={handleEditedCoffeeBeanForm}
+				buttonText="Update Coffee Details" />
 </React.Fragment>
 		);
 		}
-	}
-
 		EditCoffeeBeanForm.propTypes = {
-			coffeeBean : PropTypes.object,
-			onEditCoffeeBean: PropTypes.func
+		coffeeBean: PropTypes.object,
+		onEditCoffeeBean: PropTypes.func
 		};
 
 		export default EditCoffeeBeanForm;
