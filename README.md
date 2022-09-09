@@ -5,7 +5,7 @@
 
 
 # Diagram 
-[CoffeeBeanControl Graph](/Users/carolinecerussi/Desktop/coffeebean/public/Graph.jpg)
+![CoffeeBeanControl Graph](/Users/carolinecerussi/Desktop/coffeebean/IMG/Graph.jpg)
 
 ## Available Scripts
 
