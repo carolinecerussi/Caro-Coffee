@@ -5,7 +5,7 @@ import ReusableForm from "./ReusableForm";
 function EditCoffeeBeanForm(props) {
 	const {coffeeBean} = props;
 
-	function handleEditedCoffeeBeanForm(event) {
+	function handleEditCoffeeBeanFormSubmission(event) {
 		event.preventDefault();
 		props.onEditCoffeeBean({
 			name: event.target.name.value, 
@@ -18,7 +18,7 @@ function EditCoffeeBeanForm(props) {
 		return (
 			<React.Fragment>
 			<ReusableForm 
-			formSubmissionHandler={handleEditedCoffeeBeanForm}
+			formSubmissionHandler= {handleEditCoffeeBeanFormSubmission}
 				buttonText="Update Coffee Details" />
 </React.Fragment>
 		);

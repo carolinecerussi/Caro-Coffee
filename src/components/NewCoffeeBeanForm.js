@@ -30,4 +30,4 @@ NewCoffeeBeanForm.propTypes = {
 };
 
 
-export default NewCoffeeBeanForm
+export default NewCoffeeBeanForm;
