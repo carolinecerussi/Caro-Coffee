@@ -5,12 +5,14 @@ import NewCoffeeBeanForm from "./NewCoffeeBeanForm";
 import CoffeeBeanList from './CoffeeBeanList';
 import CoffeeBeanDetail from './CoffeBeanDetail';
 import EditCoffeeBeanForm from './EditCoffeeBeanForm';
+import CoffeeBean from "./CoffeeBean";
+import Header from "./Header";
 
 
 class CoffeeBeanControl extends React.Component {
 	constructor(props) {
 		super(props);
-		this.state = { hasError: false,
+		CoffeeBean.state = { hasError: false,
 			formVisibleOnPage: false, //new coffeebean form
 			mainCoffeBeanList: [],
 			selectedCoffeeBean: null,
@@ -65,14 +67,14 @@ class CoffeeBeanControl extends React.Component {
 render(){
   const styledButton = {
     backgroundColor: 'Pink',
-    color: 'white',
+    color: 'Pink',
     fontSize: '30px',
     padding: '10px',
     borderRadius: '10px',
     cursor: 'pointer',
     marginRight: '800',
     margin: 'auto'
-    }
+	}
     
 	let currentlyVisibleState = null;
 	let buttonText = null; 
@@ -100,16 +102,20 @@ render(){
       coffeeBeanList={this.state.mainCoffeeBeanList} 
       onCoffeeBeanSelection ={this.handleChangingSelectedCoffeeBean} />
 
-    buttonText = "Add Coffee Beans" 
+    buttonText = "Add Coffee Beans";
 	}
-	return (
-		<React.Fragment>
-			{currentlyVisibleState}
-			<button style= {styledButton} onClick={this.handleClick}>{buttonText}</button> 
-		</React.Fragment>
-	);
-}
 
-}
+	return(
+		<React.Fragment>
+			<Header />
+			<CoffeeBeanList >
+			 <button style={styledButton}  onClick={this.handleClick}>{buttonText}</button> />
+			{currentlyVisibleState}
+			</CoffeeBeanList>
+			<button style={styledButton}  onClick={this.handleClick}>{buttonText}</button> 
+		</React.Fragment>
+	)};
+
+	}
 
 export default CoffeeBeanControl;
