@@ -1,11 +1,18 @@
 # Latte Larry's Coffee
 
 ## By Caroline Cerussi
+
 ## Description:
 
-![CoffeeBeanControl Graph](IMG/Graph.jpg)
+# Technologies Used: 
+
+
+
+
 # Diagram 
-{IMG/Graph.jpg}
+![CoffeeBeanControl Graph](IMG/Graph.jpg)
+
+
 ## Available Scripts
 
 In the project directory, you can run:

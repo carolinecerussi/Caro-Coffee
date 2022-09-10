@@ -3,14 +3,14 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './components/App';
 import reportWebVitals from './reportWebVitals';
-import Header from './components/Header';
 
+import CoffeeBeanControl from './components/CoffeeBeanControl';
 const container = document.getElementById('root');
 const root = ReactDOM.createRoot(container);
 root.render(
   <React.StrictMode>
-    <Header />
     <App />
+		<CoffeeBeanControl />
   </React.StrictMode>
 );
 
@@ -18,3 +18,4 @@ root.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+ 
