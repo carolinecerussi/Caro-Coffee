@@ -8,10 +8,12 @@ function Header(){
 
 	}
 	return (
+		<React.Fragment>
 		<div style= {headerComponentStyles}>
 			<h1>Latte Larry's Coffee Collection</h1>
 		</div>
-	);
+		</React.Fragment>
+	)
 	}
 
 	export default Header;

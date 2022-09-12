@@ -109,7 +109,7 @@ render(){
 <button onClick={this.handleClick}>
 	{buttonText}</button>
 	</React.Fragment>
-	);
+	)
 }
 }
 

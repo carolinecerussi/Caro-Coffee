@@ -6,7 +6,7 @@ function App() {
   return (
     <React.Fragment>
       <Header />
-       <CoffeeBeanControl />
+      <CoffeeBeanControl />
       </React.Fragment>
   );
 }

@@ -14,10 +14,10 @@ import PropTypes from 'prop-types';
 <React.Fragment>
   <div onClick={()=> props.whenCoffeeBeanClicked(props.id)} style= {CoffeeBeanStyles}>
     <h1>{props.name}</h1>
-    <h3>{props.origin}</h3>
-    <h3>{props.roast}</h3>
-    <h3>{props.price}</h3>
-    <h3>{props.description}</h3>
+    <h3>Origin: {props.origin}</h3>
+    <h3>Roast: {props.roast}</h3>
+    <h3>Price: ${props.price}</h3>
+    <h3>Description{props.description}</h3>
     </div>
 </React.Fragment>
 );
