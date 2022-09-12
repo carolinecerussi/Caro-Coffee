@@ -3,21 +3,22 @@ import PropTypes from 'prop-types';
 
 
   function CoffeeBean(props) {
-    const CoffeeBeanStyles = {
-      backgroundColor: '#62A4D3',
-      marginTop: '20px',
-      marginLeft: '20px',
-      marginRight: '20px',
-      paddingTop: '10px'
-    }
+    // const CoffeeBeanStyles = {
+    //   backgroundColor: '#62A4D3',
+    //   marginTop: '20px',
+    //   marginLeft: '20px',
+    //   marginRight: '20px',
+    //   paddingTop: '10px'
+    // }
   return (
 <React.Fragment>
-  <div onClick={()=> props.whenCoffeeBeanClicked(props.id)} style= {CoffeeBeanStyles}>
+  <div onClick={()=> props.whenCoffeeBeanClicked(props.id)} >
     <h1>{props.name}</h1>
     <h3>Origin: {props.origin}</h3>
     <h3>Roast: {props.roast}</h3>
     <h3>Price: ${props.price}</h3>
     <h3>Description{props.description}</h3>
+    <h3>Weight: {props.weight}</h3>
     </div>
 </React.Fragment>
 );
@@ -27,6 +28,8 @@ CoffeeBean.propTypes = {
   origin: PropTypes.string.isRequired,
   id: PropTypes.string,
   price: PropTypes.string.isRequired,
+  description: PropTypes.string,
+  weight: PropTypes.number,
   whenCoffeeBeanClicked: PropTypes.func
 };
 

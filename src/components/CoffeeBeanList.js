@@ -1,7 +1,6 @@
 import React from "react";
 import CoffeeBean from "./CoffeeBean";
 import PropTypes from "prop-types";
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 function CoffeeBeanList(props) {
 	const coffeeBeanListStyles = {
@@ -17,19 +16,18 @@ function CoffeeBeanList(props) {
 	return (
 
 <React.Fragment>
-	<card style={coffeeBeanListStyles}>
-		{props.coffeeBeanList.map((coffeeBean) =>
-			<CoffeeBean
+		{props.coffeeBeanList.map(coffeeBean => (
+			<CoffeeBean style={coffeeBeanListStyles}
 			whenCoffeeBeanClicked = {props.onCoffeeBeanSelection}
 			name = {coffeeBean.name}
 			origin = {coffeeBean.origin}
 			roast = {coffeeBean.roast}
 			price = {coffeeBean.price}
 			description = {coffeeBean.description}
+			weight = {coffeeBean.weight}
 			id = {coffeeBean.id}
 			key = {coffeeBean.id}/>
-		)}
-	</card>
+		))}
 </React.Fragment>
 	);
 }

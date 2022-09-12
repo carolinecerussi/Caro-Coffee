@@ -13,7 +13,9 @@ function EditCoffeeBeanForm (props) {
 			roast: event.target.origin.value,
 			price: event.target.price.value,
 			description : event.target.description.value,
-			id: coffeeBean.id
+			id: coffeeBean.id,
+			weight: parseInt(event.target.weight.value)
+			
 		});
 		}
 		return (

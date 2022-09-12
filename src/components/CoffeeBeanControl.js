@@ -21,7 +21,8 @@ class CoffeeBeanControl extends React.Component {
 	handleAddingNewCoffeeBeanToList = (newCoffeeBean) => {
 		const newMainCoffeeBeanList = this.state.mainCoffeeBeanList.concat(newCoffeeBean);
 		this.setState({mainCoffeeBeanList: newMainCoffeeBeanList,
-		formVisibleOnPage: false });
+		formVisibleOnPage: false 
+	});
 	}
 	//Read
 	handleClick = () => {
@@ -42,7 +43,8 @@ class CoffeeBeanControl extends React.Component {
 		const selectedCoffeeBean = this.state.mainCoffeBeanList.filter(coffeeBean => coffeeBean.id === id)[0];
 		this.setState({selectedCoffeeBean: selectedCoffeeBean});
 	}
-	handleEditClick= (id) => {
+	handleEditClick= () => {
+		console.log('handleEditClick Reached')
 	this.setState({editing: true});
 	}
 
@@ -52,8 +54,8 @@ class CoffeeBeanControl extends React.Component {
 			mainCoffeeBeanList: editedMainCoffeeBeanList,
 			editing: false,
 			selectedCoffeeBean: null
-		})
-	}
+		});
+	};
 
 	handleDeletingCoffeeBean = (id) => {
 		const newMainCoffeeBeanList = this.state.mainCoffeeBeanList.filter(coffeeBean => coffeeBean.id !== id);
@@ -61,12 +63,21 @@ class CoffeeBeanControl extends React.Component {
 			mainCoffeeBeanList: newMainCoffeeBeanList,
 			selectedCoffeeBean: null
 		})
-	}
-
-render(){
+	};
+handleChangingCoffeeBeanWeight = (weight) => {
+	console.log(this.state);
+	const changedWeight = this.state.selectedCoffeeBean.weight -1;
+	console.log(this.state);
+	console.log(changedWeight);
+	this.setState({changedWeight: changedWeight});
+	console.log(this.state);
+	console.log(changedWeight);
+		
+	};
+render() {
   const styledButton = {
     backgroundColor: 'Pink',
-    color: 'Pink',
+    color: 'white',
     fontSize: '30px',
     padding: '10px',
     borderRadius: '10px',
@@ -77,40 +88,51 @@ render(){
     
 	let currentlyVisibleState = null;
 	let buttonText = null; 
-
   if (this.state.editing) {
-    currentlyVisibleState = <EditCoffeeBeanForm coffeeBean = {this.state.selectedCoffeeBean} onEditCoffeeBean = {this.handleEditingCoffeeBeanList} />
+    currentlyVisibleState = (
+		<EditCoffeeBeanForm 
+		coffeeBean={this.state.selectedCoffeeBean} 
+		onEditCoffeeBean = {this.handleEditingCoffeeBeanList}
+		/>
+		);
     buttonText = "Return to Coffee List";
   } else if (this.state.selectedCoffeeBean != null) {
-    currentlyVisibleState = 
+    currentlyVisibleState = (
     <CoffeeBeanDetail 
       coffeeBean={this.state.selectedCoffeeBean} 
       onClickingDelete = {this.handleDeletingCoffeeBean} 
-      onClickingEdit = {this.handleEditClick} />
+      onClickingEdit = {this.handleEditClick} 
+			onClickingSell= {this.handleChangingCoffeeBeanWeight}
+			/>
+			);
     buttonText = "Return to Coffee List";
   }
 	else if (this.state.formVisibleOnPage) {
-		currentlyVisibleState = 
+		currentlyVisibleState = (
     <NewCoffeeBeanForm 
-     onNewCoffeeBeanCreation={this.handleAddingNewCoffeeBeanToList} />
-		
+     onNewCoffeeBeanCreation={this.handleAddingNewCoffeeBeanToList} 
+		 />
+		);
     buttonText = "Return to Coffee List"; 
 	} else {
-		currentlyVisibleState = 
+		currentlyVisibleState = (
     <CoffeeBeanList
       coffeeBeanList={this.state.mainCoffeeBeanList} 
-      onCoffeeBeanSelection ={ this.handleChangingSelectedCoffeeBean } />
+      onCoffeeBeanSelection ={ this.handleChangingSelectedCoffeeBean }
+			 />
+		)
     buttonText = "Add Coffee Beans";
 	}
+
 
 	return(
 		<React.Fragment>
 {currentlyVisibleState}
-<button onClick={this.handleClick}>
+<button style={styledButton} onClick={this.handleClick}>
 	{buttonText}</button>
 	</React.Fragment>
 	)
 }
 }
 
-export default CoffeeBeanControl;
+export default CoffeeBeanControl

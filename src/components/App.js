@@ -5,10 +5,10 @@ import CoffeeBeanControl from "./CoffeeBeanControl";
 function App() {
   return (
     <React.Fragment>
-      <Header />
+    <Header />
       <CoffeeBeanControl />
       </React.Fragment>
-  );
+  )
 }
 
 export default App;

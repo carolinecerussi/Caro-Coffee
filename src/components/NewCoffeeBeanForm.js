@@ -15,13 +15,14 @@ function NewCoffeeBeanForm(props) {
 			roast: event.target.roast.value,
 			description: event.target.description.value,
 			id: v4(),
-			// pounds: getWeight()
+			weight: 130 
 	});
 }
 	return (
 	<React.Fragment>
-		<NewCoffeeBeanForm
-			formSubmifunctionssionHandler= {handleNewCoffeeBeanFormSubmission} buttonText="Add Coffee" />
+		<ReusableForm
+			formSubmifunctionssionHandler= {handleNewCoffeeBeanFormSubmission} buttonText='Add Coffee' 
+			/>
 </React.Fragment>
 
 );

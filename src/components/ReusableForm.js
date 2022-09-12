@@ -35,9 +35,11 @@ const ReusableForm = (props) => {
           name='description'
           placeholder='Flavor Description' />
         <button type='submit'>{props.buttonText}</button>
+        <input type='number' name='weight' placeholder="130"/>
       </form>
     </React.Fragment>
-  )};
+  );
+}
 
 ReusableForm.propTypes = {
   formSubmissionHandler: PropTypes.func,

@@ -1,12 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Button from 'react-bootstrap/Button';
 
 
 function CoffeeBeanDetail(props) {
-	const{ coffeeBean, onClickingDelete } = props;
-
+	const{ coffeeBean, onClickingDelete, onClickingSell } = props;
 	return(
 		<React.Fragment>
 			<h1>{coffeeBean.name} Details: </h1>
@@ -14,12 +11,12 @@ function CoffeeBeanDetail(props) {
 			<h2>Roast: {coffeeBean.roast}</h2>
 			<h2>Price: {coffeeBean.price}</h2>
 			<h2>Description: {coffeeBean.description }</h2>
-			<Button onClick={()=> onClickingDelete(coffeeBean.id)}>Delete Coffee Bag</Button>
-			<Button onClick={ props.onClickingEdit} > Edit Coffee Details</Button>
+			<button onClick={() => props.onClickingSell(coffeeBean.weight)}>Sell</button>
+			<button onClick={()=> props.onClickingDelete(coffeeBean.id)}>Delete Coffee Bag</button>
+			<button onClick={props.onClickingEdit} > Edit Coffee Details</button>
 		</React.Fragment>
 	);
 }
-
 CoffeeBeanDetail.propTypes = {
 	coffeeBean: PropTypes.object,
 	onClickingDelete:PropTypes.func,
