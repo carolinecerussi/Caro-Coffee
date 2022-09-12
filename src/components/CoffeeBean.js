@@ -3,17 +3,11 @@ import PropTypes from 'prop-types';
 
 
   function CoffeeBean(props) {
-    // const CoffeeBeanStyles = {
-    //   backgroundColor: '#62A4D3',
-    //   marginTop: '20px',
-    //   marginLeft: '20px',
-    //   marginRight: '20px',
-    //   paddingTop: '10px'
-    // }
+
   return (
 <React.Fragment>
-  <div onClick={()=> props.whenCoffeeBeanClicked(props.id)} >
-    <h1>{props.name}</h1>
+  <div onClick={() => props.whenCoffeeBeanClicked(props.id)} >
+    <h1>Name: {props.name}</h1>
     <h3>Origin: {props.origin}</h3>
     <h3>Roast: {props.roast}</h3>
     <h3>Price: ${props.price}</h3>

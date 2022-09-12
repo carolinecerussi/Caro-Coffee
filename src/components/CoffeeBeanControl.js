@@ -3,7 +3,7 @@
 import React from "react";
 import NewCoffeeBeanForm from "./NewCoffeeBeanForm";
 import CoffeeBeanList from './CoffeeBeanList';
-import CoffeeBeanDetail from './CoffeBeanDetail';
+import CoffeeBeanDetail from './CoffeeBeanDetail';
 import EditCoffeeBeanForm from './EditCoffeeBeanForm';
 
 
@@ -12,17 +12,29 @@ class CoffeeBeanControl extends React.Component {
 		super(props);
 		this.state = { hasError: false,
 			formVisibleOnPage: false, //new coffeebean form
-			mainCoffeBeanList: [],
+			mainCoffeeBeanList: [],
 			selectedCoffeeBean: null,
 			editing: false // form for editing ticket
 		};
+		this.handleShowForm = this.handleShowForm.bind(this);
+	}
+	handleShowForm = () => {
+		 if(this.state.selectedCoffeeBean === null) {
+			this.setState((prevState) => ({
+				formVisibleOnPage : !prevState.formVisibleOnPage,
+			}));
+		 } else {
+			this.setState({
+				formVisibleOnPage: false,
+				selectedCoffeeBean: null,
+				editing: false
+			});
+		 }
 	}
 //Create
 	handleAddingNewCoffeeBeanToList = (newCoffeeBean) => {
 		const newMainCoffeeBeanList = this.state.mainCoffeeBeanList.concat(newCoffeeBean);
-		this.setState({mainCoffeeBeanList: newMainCoffeeBeanList,
-		formVisibleOnPage: false 
-	});
+		this.setState({mainCoffeeBeanList: newMainCoffeeBeanList});
 	}
 	//Read
 	handleClick = () => {
@@ -40,7 +52,7 @@ class CoffeeBeanControl extends React.Component {
 	}
 		
 	handleChangingSelectedCoffeeBean = (id) => {
-		const selectedCoffeeBean = this.state.mainCoffeBeanList.filter(coffeeBean => coffeeBean.id === id)[0];
+		const selectedCoffeeBean = this.state.mainCoffeeBeanList.filter(coffeeBean => coffeeBean.id === id)[0];
 		this.setState({selectedCoffeeBean: selectedCoffeeBean});
 	}
 	handleEditClick= () => {

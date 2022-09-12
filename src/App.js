@@ -1,6 +1,6 @@
 import React from "react";
-import Header from "./Header";
-import CoffeeBeanControl from "./CoffeeBeanControl";
+import Header from "./components/Header";
+import CoffeeBeanControl from "./components/CoffeeBeanControl";
 
 function App() {
   return (

@@ -3,9 +3,9 @@ import PropTypes from "prop-types";
 
 
 function CoffeeBeanDetail(props) {
-	const{ coffeeBean, onClickingDelete, onClickingSell } = props;
-	return(
-		<React.Fragment>
+	const{ coffeeBean } = props;
+	return[
+		<React.Fragment key={coffeeBean.id}>
 			<h1>{coffeeBean.name} Details: </h1>
 			<h2>Origin: {coffeeBean.origin}</h2>
 			<h2>Roast: {coffeeBean.roast}</h2>
@@ -15,12 +15,13 @@ function CoffeeBeanDetail(props) {
 			<button onClick={()=> props.onClickingDelete(coffeeBean.id)}>Delete Coffee Bag</button>
 			<button onClick={props.onClickingEdit} > Edit Coffee Details</button>
 		</React.Fragment>
-	);
+	]
 }
 CoffeeBeanDetail.propTypes = {
 	coffeeBean: PropTypes.object,
 	onClickingDelete:PropTypes.func,
-	onClickingEdit : PropTypes.func
+	onClickingEdit : PropTypes.func,
+	onClickingSell: PropTypes.func
 };
 
 export default CoffeeBeanDetail;

@@ -9,23 +9,25 @@ function NewCoffeeBeanForm(props) {
 	function handleNewCoffeeBeanFormSubmission(event) {
 		event.preventDefault();
 		props.onNewCoffeeBeanCreation({
-			name: event.target.name.value,
+			names: event.target.name.value,
 			origin: event.target.origin.value,
 			price: event.target.price.value,
-			roast: event.target.roast.value,
+			roast: event.target.roast,
 			description: event.target.description.value,
 			id: v4(),
-			weight: 130 
+			weight: parseInt(event.target.weight.value) * 130,
+			//  quantity: parseInt(event.target.quantity.value),
+			//  totalPounds: parseInt(event.target.quantity.value) * 130, 
 	});
 }
 	return (
 	<React.Fragment>
 		<ReusableForm
-			formSubmifunctionssionHandler= {handleNewCoffeeBeanFormSubmission} buttonText='Add Coffee' 
+			formSubmissionHandler= {handleNewCoffeeBeanFormSubmission} buttonText="Add Coffee" 
 			/>
 </React.Fragment>
 
-);
+)
 }
 NewCoffeeBeanForm.propTypes = {
 	onNewCoffeeBeanCreation: PropTypes.func
