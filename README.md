@@ -10,12 +10,13 @@ An inventory tracker for Larry's coffee bean business. You can see a list of cof
 
 # Technologies Used: 
 
--_Node
--_CSS
--_React
--_Bootstrap
--_Babel
--_Es-Linter
+* Node
+* JavaScript
+* CSS
+* React
+* Bootstrap
+* Babel
+* Es-Linter
 
 
 # Diagram 
