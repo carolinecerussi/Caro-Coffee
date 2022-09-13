@@ -9,10 +9,10 @@ function NewCoffeeBeanForm(props) {
 	function handleNewCoffeeBeanFormSubmission(event) {
 		event.preventDefault();
 		props.onNewCoffeeBeanCreation({
-			names: event.target.name.value,
+			name: event.target.name.value,
 			origin: event.target.origin.value,
 			price: event.target.price.value,
-			roast: event.target.roast,
+			roast: event.target.roast.value,
 			description: event.target.description.value,
 			id: v4(),
 			weight: parseInt(event.target.weight.value) * 130,

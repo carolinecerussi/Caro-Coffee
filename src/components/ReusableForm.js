@@ -19,7 +19,7 @@ function ReusableForm(props){
         </div>
         <div className='mb-3'> 
         <label htmlFor='roast' className='form-label'>Roast</label>
-          <select   required={true} id='dropdown'>
+          <select name="roast"  required={true} id='dropdown'>
             <option value='Light'>Light</option>
             <option value='Medium'>Medium</option>
             <option value='Dark'>Dark</option>
@@ -45,42 +45,6 @@ function ReusableForm(props){
     </React.Fragment>
   );
 }
-
-
-// function ReusableForm(props){
-//   return (
-//     <React.Fragment>
-//       <form onSubmit={props.formSubmissionHandler}>
-//         <input 
-//           type='text'
-//           name='name'
-//           placeholder='Name' />
-//         <input 
-//           type='text'
-//           name='origin'
-//           placeholder='Origin' />
-// 					<input 
-//           name='roast' placeholder='Select Roast'>
-//           <select id="dropdown">
-//             <option value="Light">Light</option>
-//             <option value="Medium">Medium</option>
-//             <option value="Dark">Dark</option>
-//           </select>
-//           </input> 
-// 				  <input 
-//           type='text'
-//           name='price'
-//           placeholder='Price (per bag)' />
-//         <textarea 
-//           name='description'
-//           placeholder='Flavor Description' />
-       
-//         <input type='number' name='weight' placeholder="130"/>
-//       <button type='submit'>{props.buttonText}</button>
-//       </form>
-//     </React.Fragment>
-//   );
-// }
 
 ReusableForm.propTypes = {
   formSubmissionHandler: PropTypes.func,
