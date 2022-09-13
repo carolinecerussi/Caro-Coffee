@@ -9,35 +9,39 @@ function ReusableForm(props){
       <h2>New Coffee Bean Form</h2>
       <form onSubmit={props.formSubmissionHandler}>
         <div className='mb-3'>
-          <label htmlFor='name' className='form-label'>Name:</label>
-          <input type='text' className='form-control' name='name' />
+          <label htmlFor='name' className='form-label'> Name:</label>
+          <input type='text' className='form-control' name='name' required={true} />
         </div>
+      
         <div className='mb-3'>
           <label htmlFor='origin' className='form-label'>Origin:</label>
-          <input type='string' className='form-control' name='origin' />
+          <input type='string' className='form-control' name='origin' required={true} />
         </div>
         <div className='mb-3'> 
-        <label htmlFor='roast' className='form-label'>Select Roast</label>
-          <select id="dropdown">
-            <option value="Light">Light</option>
-            <option value="Medium">Medium</option>
-            <option value="Dark">Dark</option>
+        <label htmlFor='roast' className='form-label'>Roast</label>
+          <select   required={true} id='dropdown'>
+            <option value='Light'>Light</option>
+            <option value='Medium'>Medium</option>
+            <option value='Dark'>Dark</option>
           </select> 
           </div>
           <div className='mb-3'>  
           <label htmlFor='price' className='form-label'>Price: </label>
-          <input type='string' className='form-control' name='price' />
+          <input type='string' className='form-control' name='price' required={true} placeholder='$'/>
+          {/* <input type="file" /> */}
+
         </div>  
+        <div className='mb-3'> 
+        <label htmlFor='description' className='form-label'>Flavor Profiles: </label>
+        <textarea required={true} name="description">
+        </textarea>  </div>
         <div className='mb-3'>  
-          <label htmlFor='description' className='form-label'>Description: </label>
-          <textarea type='text' className='form-control' name='description' />
+          <label htmlFor='weight' className='form-label'>Weight: </label>
+          <input type='string' className='form-control' name='weight'required={true} />
         </div>  
-        <div className='mb-3'>  
-          <label htmlFor='Weight' className='form-label'>Weight: </label>
-          <input type='number' className='form-control' name='weight' />
-        </div>  
-        <button type='submit' className='btn btn-success'>{props.buttonText}</button>
+        <button type='submit' className='btn btn-success'>{props.buttonText}</button>       
       </form>
+
     </React.Fragment>
   );
 }

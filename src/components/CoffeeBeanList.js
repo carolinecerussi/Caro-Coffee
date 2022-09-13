@@ -17,9 +17,9 @@ function CoffeeBeanList(props) {
 		{props.coffeeBeanList.map(coffeeBean => (
 			<CoffeeBean 
 			whenCoffeeBeanClicked = {props.onCoffeeBeanSelection}
-			names = {coffeeBean.names}
+			name = {coffeeBean.name}
 			origin = {coffeeBean.origin}
-			roast = {coffeeBean.Roast}
+			roast = {coffeeBean.roast}
 			price = {coffeeBean.price}
 			description = {coffeeBean.description}
 			weight = {coffeeBean.weight}

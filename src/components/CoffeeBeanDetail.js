@@ -5,7 +5,8 @@ import PropTypes from "prop-types";
 function CoffeeBeanDetail(props) {
 	const{ coffeeBean } = props;
 	return[
-		<React.Fragment key={coffeeBean.id}>
+		<React.Fragment
+		 key={coffeeBean.id}>
 			<h1>{coffeeBean.name} Details: </h1>
 			<h2>Origin: {coffeeBean.origin}</h2>
 			<h2>Roast: {coffeeBean.roast}</h2>

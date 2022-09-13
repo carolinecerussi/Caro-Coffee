@@ -1,7 +1,8 @@
 body {
-  background-color: blueviolet;
-  margin: 0;
-  font-family: 'Jura', sans-serif;
+  color: rgba(203, 203, 76, 0.824);
+  margin: 20pt;
+  text-align: center;
+  font-family: 'monaco', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

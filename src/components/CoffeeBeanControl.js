@@ -98,15 +98,15 @@ render() {
     margin: 'auto'
 	}
     
-	let currentlyVisibleState = null;
+	let currentlyVisibleState = false;
 	let buttonText = null; 
   if (this.state.editing) {
-    currentlyVisibleState = (
+    currentlyVisibleState = 
 		<EditCoffeeBeanForm 
 		coffeeBean={this.state.selectedCoffeeBean} 
 		onEditCoffeeBean = {this.handleEditingCoffeeBeanList}
 		/>
-		);
+		
     buttonText = "Return to Coffee List";
   } else if (this.state.selectedCoffeeBean != null) {
     currentlyVisibleState = (
@@ -127,20 +127,17 @@ render() {
 		);
     buttonText = "Return to Coffee List"; 
 	} else {
-		currentlyVisibleState = (
+		currentlyVisibleState = 
     <CoffeeBeanList
       coffeeBeanList={this.state.mainCoffeeBeanList} 
       onCoffeeBeanSelection ={ this.handleChangingSelectedCoffeeBean }
 			 />
-		)
     buttonText = "Add Coffee Beans";
 	}
-
-
 	return(
 		<React.Fragment>
 {currentlyVisibleState}
-<button style={styledButton} onClick={this.handleClick}>
+<button style={styledButton} type="button" onClick={this.handleShowForm}>
 	{buttonText}</button>
 	</React.Fragment>
 	)

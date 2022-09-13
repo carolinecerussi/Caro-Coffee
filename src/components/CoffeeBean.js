@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from 'prop-types';
 
 
-  function CoffeeBean(props) {
+function CoffeeBean(props) {
 
   return (
 <React.Fragment>
@@ -23,7 +23,7 @@ CoffeeBean.propTypes = {
   id: PropTypes.string,
   price: PropTypes.string.isRequired,
   description: PropTypes.string,
-  weight: PropTypes.number,
+  weight: PropTypes.string,
   whenCoffeeBeanClicked: PropTypes.func
 };
 
