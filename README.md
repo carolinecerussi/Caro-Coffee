@@ -29,8 +29,7 @@ An inventory tracker for Larry's coffee bean business. You can see a list of cof
 * Navigate to the top level of the directory
 * In your terminal console: $cd to coffeebean
 * $npm install
-* $npm run start
-
+* $npm run start to open in webbrowser http://localhost:3000
 
 # Known Bugs
 * Method to correctly decrease the coffee bean weight is not completely functional.

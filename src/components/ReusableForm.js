@@ -45,7 +45,7 @@ function ReusableForm(props){
         <h />
         <div className='mb-3'>  
           <label htmlFor='quantity' className='form-label'>Quantity: </label>
-          <input type='number' className='form-control' name='quantity'required={true} />
+          <input  className='form-control' name='quantity'required={true} />
         </div> 
         <h /> 
         <button  type='submit' className='btn btn-success' >{props.buttonText}</button>       
