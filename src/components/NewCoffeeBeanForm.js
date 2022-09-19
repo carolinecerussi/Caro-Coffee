@@ -15,7 +15,7 @@ function NewCoffeeBeanForm(props) {
 			roast: event.target.roast.value,
 			description: event.target.description.value,
 			id: v4(),
-			weight: parseInt(event.target.weight.value) * 130,
+			weight: parseInt(event.target.weight.value),
 			//  quantity: parseInt(event.target.quantity.value),
 			//  totalPounds: parseInt(event.target.quantity.value) * 130, 
 	});
@@ -23,7 +23,7 @@ function NewCoffeeBeanForm(props) {
 	return (
 	<React.Fragment>
 		<ReusableForm
-			formSubmissionHandler= {handleNewCoffeeBeanFormSubmission} buttonText="Add Coffee" 
+			formSubmissionHandler= {handleNewCoffeeBeanFormSubmission}  buttonText="Add Coffee" 
 			/>
 </React.Fragment>
 

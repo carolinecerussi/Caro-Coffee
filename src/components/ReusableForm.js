@@ -27,9 +27,12 @@ function ReusableForm(props){
           </div>
           <div className='mb-3'>  
           <label htmlFor='price' className='form-label'>Price: </label>
-          <input type='string' className='form-control' name='price' required={true} placeholder='$'/>
-          {/* <input type="file" /> */}
-
+          <input prefix="$"
+  name="price"
+  placeholder="$"
+  decimalsLimit={2}
+  onValueChange={(value, name) => console.log(value, name)}
+/>
         </div>  
         <div className='mb-3'> 
         <label htmlFor='description' className='form-label'>Flavor Profiles: </label>
@@ -37,9 +40,9 @@ function ReusableForm(props){
         </textarea>  </div>
         <div className='mb-3'>  
           <label htmlFor='weight' className='form-label'>Weight: </label>
-          <input type='string' className='form-control' name='weight'required={true} />
+          <input type='number' className='form-control' name='weight' suffix="lbs" required={true} />
         </div>  
-        <button type='submit' className='btn btn-success'>{props.buttonText}</button>       
+        <button type='submit' className='btn btn-success' >{props.buttonText}</button>       
       </form>
 
     </React.Fragment>

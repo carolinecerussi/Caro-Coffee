@@ -90,7 +90,7 @@ render() {
   const styledButton = {
     backgroundColor: 'Pink',
     color: 'white',
-    fontSize: '30px',
+    fontSize: '20px',
     padding: '10px',
     borderRadius: '10px',
     cursor: 'pointer',
