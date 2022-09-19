@@ -51,23 +51,31 @@ handleDeletingCoffeeBean = (id) => {
 };
 
 //Edit/Sell
-handleSellingCoffeeBean= (id) => {
-	const soldCoffeeBeanList = this.state.mainCoffeeBeanList.map((coffeeBean) => {
-		if (coffeeBean === id ) {
-		if ( coffeeBean.quantity > 0) {
-			return {
-				...coffeeBean,
-				quantity: coffeeBean.quantity -1,
-			};
-		} else {
-				return coffeeBean;
-			}
+
+
+		//below- changing inventory of selected coffee sack//
+		handleChangingSelectedCoffeeBean = (id) => {
+			const selectedCoffeeBean = this.state.mainCoffeeBeanList.filter(coffeeBean => coffeeBean.id === id)[0];
+			this.setState({selectedCoffeeBean: selectedCoffeeBean});
 		}
-	})
+	
 
-	this.setState({mainCoffeeBeanList: soldCoffeeBeanList})
-	}
 
+handleSellingCoffeeBean= () => {
+	console.log(this.state.selectedCoffeeBean.quantity);
+		const coffeeBeansSold = this.state.selectedCoffeeBean;
+		if ( this.state.selectedCoffeeBean.quantity !== 0) {
+			const quantityToSell = { 
+				quantity: (coffeeBeansSold.quantity -=1)
+			};
+			this.handleChangingSelectedCoffeeBean(quantityToSell.id);
+		console.log(this.state.selectedCoffeeBean.quantity);
+		} else {
+			this.handleChangingSelectedCoffeeBean(this.state.selectedCoffeeBean.id);
+		}
+	};
+
+	
 	handleEditingCoffeeBeanList = (coffeeBeanToEdit) => {
 		const editedMainCoffeeBeanList = this.state.mainCoffeeBeanList.filter(coffeeBean => coffeeBean.id !==this.state.selectedCoffeeBean.id).concat(coffeeBeanToEdit);
 		this.setState({
@@ -97,12 +105,6 @@ handleSellingCoffeeBean= (id) => {
 				formVisibleOnPage: !prevState.formVisibleOnPage
 			}));
 		}
-	}
-
-		//below- changing inventory of selected coffee sack//
-	handleChangingSelectedCoffeeBean = (id) => {
-		const selectedCoffeeBean = this.state.mainCoffeeBeanList.filter(coffeeBean => coffeeBean.id === id)[0];
-		this.setState({selectedCoffeeBean: selectedCoffeeBean});
 	}
 
 
