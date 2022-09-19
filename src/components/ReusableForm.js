@@ -12,11 +12,12 @@ function ReusableForm(props){
           <label htmlFor='name' className='form-label'> Name:</label>
           <input type='text' className='form-control' name='name' required={true} />
         </div>
-      
+      <h /> 
         <div className='mb-3'>
           <label htmlFor='origin' className='form-label'>Origin:</label>
           <input type='string' className='form-control' name='origin' required={true} />
         </div>
+      <h />
         <div className='mb-3'> 
         <label htmlFor='roast' className='form-label'>Roast</label>
           <select name="roast"  required={true} id='dropdown'>
@@ -24,25 +25,31 @@ function ReusableForm(props){
             <option value='Medium'>Medium</option>
             <option value='Dark'>Dark</option>
           </select> 
-          </div>
-          <div className='mb-3'>  
-          <label htmlFor='price' className='form-label'>Price: </label>
+         </div>
+         <h /> 
+           <div className='mb-3'>  
+          <label htmlFor='price' className='form-label'>Price per lb:  </label>
           <input prefix="$"
   name="price"
   placeholder="$"
-  decimalsLimit={2}
-  onValueChange={(value, name) => console.log(value, name)}
+  // decimalsLimit={2}
+  // onValueChange={(value, name) => console.log(value, name)}
 />
-        </div>  
+        </div> 
+        <h /> 
         <div className='mb-3'> 
         <label htmlFor='description' className='form-label'>Flavor Profiles: </label>
         <textarea required={true} name="description">
-        </textarea>  </div>
+        </textarea>  
+        </div>
+        <h />
         <div className='mb-3'>  
-          <label htmlFor='weight' className='form-label'>Weight: </label>
-          <input type='number' className='form-control' name='weight' suffix="lbs" required={true} />
-        </div>  
-        <button type='submit' className='btn btn-success' >{props.buttonText}</button>       
+          <label htmlFor='quantity' className='form-label'>Quantity: </label>
+          <input type='number' className='form-control' name='quantity'required={true} />
+        </div> 
+        <h /> 
+        <button  type='submit' className='btn btn-success' >{props.buttonText}</button>       
+     <h />
       </form>
 
     </React.Fragment>

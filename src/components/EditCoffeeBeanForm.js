@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import ReusableForm from "./ReusableForm";
 
 function EditCoffeeBeanForm (props) { 
-	const {coffeeBean} = props;
+	const { coffeeBean } = props;
 	
 	function handleEditCoffeeBeanFormSubmission(event) {
 		event.preventDefault();
@@ -12,13 +12,13 @@ function EditCoffeeBeanForm (props) {
 			origin : event.target.origin.value,
 			roast: event.target.origin.value,
 			price: event.target.price.value,
-			// description : event.target.description.value,
+			description : event.target.description.value,
+			quantity: event.target.quantity.value,
 			id: coffeeBean.id,
-			weight: event.target.weight.value
 			
 		});
-		}
-		return (
+	};
+	return (
 			<React.Fragment>
 			<ReusableForm 
 			formSubmissionHandler= {handleEditCoffeeBeanFormSubmission}

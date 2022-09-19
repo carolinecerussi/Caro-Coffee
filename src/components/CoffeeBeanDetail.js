@@ -8,13 +8,19 @@ function CoffeeBeanDetail(props) {
 		<React.Fragment
 		 key={coffeeBean.id}>
 			<h1>{coffeeBean.name} Details: </h1>
+			<hr />
 			<h2>Origin: {coffeeBean.origin}</h2>
+			<hr />
 			<h2>Roast: {coffeeBean.roast}</h2>
+			<hr />
 			<h2>Price: {coffeeBean.price}</h2>
+			<hr />
 			<h2>Description: {coffeeBean.description }</h2>
-			<button onClick={() => props.onClickingSell(coffeeBean.weight)}>Sell</button>
+			<hr />
+			<h2>Quantity: {coffeeBean.quantity}</h2>
+			<button onClick={() => props.onClickingSell(coffeeBean.quantity)}>Sell Coffee </button>
 			<button onClick={()=> props.onClickingDelete(coffeeBean.id)}>Delete Coffee Bag</button>
-			<button onClick={props.onClickingEdit} > Edit Coffee Details</button>
+			<button onClick={()=> props.onClickingEdit(coffeeBean.id)} > Edit Coffee Details</button>
 		</React.Fragment>
 	]
 }

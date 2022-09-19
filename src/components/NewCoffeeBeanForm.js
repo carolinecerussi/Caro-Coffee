@@ -15,7 +15,8 @@ function NewCoffeeBeanForm(props) {
 			roast: event.target.roast.value,
 			description: event.target.description.value,
 			id: v4(),
-			weight: parseInt(event.target.weight.value),
+			quantity: (event.target.quantity.value)
+			// weight: parseInt(event.target.weight.value),
 			//  quantity: parseInt(event.target.quantity.value),
 			//  totalPounds: parseInt(event.target.quantity.value) * 130, 
 	});
@@ -27,8 +28,9 @@ function NewCoffeeBeanForm(props) {
 			/>
 </React.Fragment>
 
-)
-}
+);
+	}
+
 NewCoffeeBeanForm.propTypes = {
 	onNewCoffeeBeanCreation: PropTypes.func
 };

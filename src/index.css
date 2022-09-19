@@ -2,6 +2,7 @@ body {
   color: rgba(203, 203, 76, 0.824);
   margin: 20pt;
   text-align: center;
+  background-color: rgb(225, 248, 255);
   font-family: 'monaco', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

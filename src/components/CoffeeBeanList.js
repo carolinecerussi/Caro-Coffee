@@ -22,7 +22,7 @@ function CoffeeBeanList(props) {
 			roast = {coffeeBean.roast}
 			price = {coffeeBean.price}
 			description = {coffeeBean.description}
-			weight = {coffeeBean.weight}
+			quantity = {coffeeBean.quantity}
 			id = {coffeeBean.id}
 			key = {coffeeBean.id}/>
 		))}
