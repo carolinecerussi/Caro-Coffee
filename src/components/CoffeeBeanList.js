@@ -3,15 +3,15 @@ import CoffeeBean from "./CoffeeBean";
 import PropTypes from "prop-types";
 
 function CoffeeBeanList(props) {
-	// const coffeeBeanListStyles = {
-	// 	color: '#B2A479',
-	// 	backgroundColor: '#B06001',
-	// 	fontFamily: 'verdana',
-	// 	textAlign: 'center',
-	// 	padding: '15px',
-	// 	margin: 'auto',
-	// 	marginRight: '800'		
-	// }
+	const coffeeBeanListStyles = {
+		color: '#B2A479',
+		backgroundColor: '#B06001',
+		fontFamily: 'verdana',
+		textAlign: 'center',
+		padding: '15px',
+		margin: 'auto',
+		marginRight: '800'		
+	}
 	return (
 <React.Fragment>
 		{props.coffeeBeanList.map(coffeeBean => (

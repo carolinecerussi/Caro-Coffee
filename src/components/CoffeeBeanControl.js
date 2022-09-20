@@ -5,6 +5,7 @@ import NewCoffeeBeanForm from "./NewCoffeeBeanForm";
 import CoffeeBeanList from './CoffeeBeanList';
 import CoffeeBeanDetail from './CoffeeBeanDetail';
 import EditCoffeeBeanForm from './EditCoffeeBeanForm';
+// import { NonceProvider } from "react-select";
 
 
 class CoffeeBeanControl extends React.Component {
@@ -112,15 +113,15 @@ handleSellingCoffeeBean= () => {
 		
 render() {
   const styledButton = {
-    backgroundColor: 'Pink',
+    backgroundColor: 'pink',
     color: 'white',
     fontSize: '20px',
     padding: '10px',
-    borderRadius: '10px',
     cursor: 'pointer',
-    marginRight: '800',
     margin: 'auto'
 	};
+
+
     
 	let currentlyVisibleState = null;
 	let buttonText = null; 
@@ -159,8 +160,10 @@ onNewCoffeeBeanCreation={this.handleAddingNewCoffeeBeanToList} />;
 	return(
 		<React.Fragment>
 {currentlyVisibleState}
+<br></br>
 <button style={styledButton} type="button" onClick={this.handleClick}>
 	{buttonText}</button>
+	<br></br>
 	</React.Fragment>
 	);
 }

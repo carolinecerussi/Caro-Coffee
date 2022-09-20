@@ -32,7 +32,8 @@ An inventory tracker for Larry's coffee bean business. You can see a list of cof
 * $npm run start to open in webbrowser http://localhost:3000
 
 # Known Bugs
-* Method to correctly decrease the coffee bean weight is not completely functional.
+None :) 
+
 
 # License 
 copyright (c) 9-9-2022 Caroline Cerussi
