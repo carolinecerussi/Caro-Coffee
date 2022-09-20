@@ -4,8 +4,7 @@
 
 # Description:
 
-An inventory tracker for Larry's coffee bean business. You can see a list of coffee bean types and click each type to see more information about it. You can sell coffee bean bags that may be broken up for a partial purchase, and see a difference in the coffee bean weight after beans are sold. It is also possible to create a new coffee bean type form where you can input any information such as name, origin, roast etc.
-
+This application is an inventory tracker for a coffee roaster's business. It has CRUD functionality- allowing the user to create a new type of coffee bean, including a full description with a few different properties. When adding the new type, you are redirected to the home page, where you will see the name of the new coffee bean in a list format. Click each to see information - including bean name, origin, roast level, flavor description, price per pound, and quantity.  A sell method changes the quantity -1 each time a bag is sold. At any time, you can edit the information within the coffee bean type, or delete the whole object altogether from the log. 
 
 
 # Technologies Used: 
@@ -25,9 +24,9 @@ An inventory tracker for Larry's coffee bean business. You can see a list of cof
 
 # Setup & Installation Requirements
 
-* Clone this repository from https://github.com/carolinecerussi/Latte-Larrys.git to your desktop
-* Navigate to the top level of the directory
-* In your terminal console: $cd to coffeebean
+* Clone this repository from https://github.com/carolinecerussi/Caro-Coffee to your desktop
+* Navigate to the top level of the dir* In your terminal console: $cd to coffeebean
+ectory
 * $npm install
 * $npm run start to open in webbrowser http://localhost:3000
 
