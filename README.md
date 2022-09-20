@@ -19,7 +19,7 @@ This application is an inventory tracker for a coffee roaster's business. It has
 
 
 # Diagram 
-![CoffeeBeanControl Graph](img/Graph.jpg)
+![CoffeeBeanControl Graph](https://drive.google.com/file/d/1mtMhRfVmy0XkJOTNcBnmguMLMai9WaLM/view?usp=sharing)
 
 
 # Setup & Installation Requirements
